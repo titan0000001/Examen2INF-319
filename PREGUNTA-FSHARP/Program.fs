@@ -4,6 +4,8 @@
 // UNIV. MACUSAYA AGUILAR YURIKA CI:13846755 LP
 let from whom =
     sprintf "from %s" whom
+// PREGUNTA 1
+//Realice la serie Fibonacci estructurada y recursiva de tres términos hasta n 
 //FIBONACCI ITERATIVO
 let fiboIterativo n = 
     match n with 
@@ -27,9 +29,9 @@ let function1(n: int) =
   for i in 1 .. n do
     fib4 i |> printfn "%i" |> ignore
 
-//FUNCIONES DE ORDEN SUPERIOR
-let opcion = fun op arg  -> op arg
 
+ // PREGUNTA 2
+ //Resuelva el ejercicio 1 utilizando funciones temporales (lamba) (Haskell, scala, python).
 //FUNCIONES LAMBDA USANDO (fun)
 let fib =
     (-1, 1) // Initial state
@@ -41,29 +43,41 @@ let fib =
 
 
 
+// PREGUNTA 3
+//Resuelva el ejercicio 1 utilizando funciones de orden superior (Haskell, scala, python).
+//FUNCIONES DE ORDEN SUPERIOR
+let opcion = fun op arg  -> op arg
+
+
 [<EntryPoint>]
 let main argv =    
 
     // PREGUNTA 1
+    //Realice la serie Fibonacci estructurada y recursiva de tres términos hasta n 
     printf "%s" "FIBONACCI ITERATIVO " 
     //iterativo
     fiboIterativo 7 
     printf "%s " "FIBONACCI RECURSIVO " 
     //recursivo
     function1(7)
-
-    // PREGUNTA 2
-    // como funcion de orden superior    
-    printf "%s " "FUNCION DE ORDEN SUPERIOR " 
-    opcion fiboIterativo 7
-    opcion function1 7    
-
-    // PREGUNTA 3
+    
+     // PREGUNTA 2
+    //Resuelva el ejercicio 1 utilizando funciones temporales (lamba) (Haskell, scala, python).
     printf "%s" " USANDO LAMBDA USANDO (FUN) " 
     //funciones lambda
     let seq2 =  fib
     for x in seq2 do
         printf "%d " x
+
+
+    // PREGUNTA 3
+    //Resuelva el ejercicio 1 utilizando funciones de orden superior (Haskell, scala, python).
+    // como funcion de orden superior    
+    printf "%s " "FUNCION DE ORDEN SUPERIOR " 
+    opcion fiboIterativo 7
+    opcion function1 7    
+
+    
 
     //let message = from "F#" // Call the function
     //printfn "Hello world %s" message
